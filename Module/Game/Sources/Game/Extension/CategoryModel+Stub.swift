@@ -12,8 +12,8 @@ extension CategoryModel {
   public static var stub: CategoryModel {
     .init(
       id: 0,
-      name: "name string",
-      slug: "slug string",
+      name: "string",
+      slug: "string",
       gamesCount: 0,
       imageBackground: "https://i.ibb.co/MRg6STN/default-placeholder.png")
   }

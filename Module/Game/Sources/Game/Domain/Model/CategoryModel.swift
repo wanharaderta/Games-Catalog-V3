@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CategoryModel: Identifiable {
+public struct CategoryModel: Identifiable, Equatable {
   public let id: Int
   public let name: String
   public let slug: String

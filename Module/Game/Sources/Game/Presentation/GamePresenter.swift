@@ -20,6 +20,8 @@ public class GamePresenter: ObservableObject {
   //@Published public var games: [GameModel] = []
   @Published public var categories: [CategoryModel] = []
   
+  public static let promotedGame = "https://media.rawg.io/media/screenshots/c02/c02c64324edc2045ea1fc0601cdaaa0c.jpg"
+  
   public init() { }
   
   public func getGames() {

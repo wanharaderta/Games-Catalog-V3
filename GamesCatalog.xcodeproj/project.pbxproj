@@ -28,6 +28,10 @@
 		837A0A9B267849B800C51C34 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837A0A9A267849B800C51C34 /* DependencyManager.swift */; };
 		837A0AA426784EC200C51C34 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 837A0AA326784EC200C51C34 /* Core */; };
 		837A0AA626784EC500C51C34 /* Game in Frameworks */ = {isa = PBXBuildFile; productRef = 837A0AA526784EC500C51C34 /* Game */; };
+		8381166C267DD5BF00E2F472 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381166B267DD5BF00E2F472 /* SmallVerticalButton.swift */; };
+		8381166D267DD5BF00E2F472 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381166B267DD5BF00E2F472 /* SmallVerticalButton.swift */; };
+		83811672267E2B6100E2F472 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83811671267E2B6100E2F472 /* WhiteButton.swift */; };
+		83811673267E2B6100E2F472 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83811671267E2B6100E2F472 /* WhiteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,8 @@
 		83681F0C267B9EB90014858E /* TopGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGameView.swift; sourceTree = "<group>"; };
 		836DD769267B0520001A960E /* HorizontalHomeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalHomeRow.swift; sourceTree = "<group>"; };
 		837A0A9A267849B800C51C34 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		8381166B267DD5BF00E2F472 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
+		83811671267E2B6100E2F472 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,7 @@
 		835EF34726722FB8003B63EA /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				8381166A267DD59200E2F472 /* Utils */,
 				835EF34826722FC3003B63EA /* Home */,
 			);
 			path = Module;
@@ -220,6 +227,16 @@
 				835EF38726723808003B63EA /* Info.plist */,
 			);
 			path = GamesCatalogTests;
+			sourceTree = "<group>";
+		};
+		8381166A267DD59200E2F472 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8381166B267DD5BF00E2F472 /* SmallVerticalButton.swift */,
+				83811671267E2B6100E2F472 /* WhiteButton.swift */,
+			);
+			name = Utils;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		83814FD32673724700DB46B5 /* Frameworks */ = {
@@ -364,8 +381,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				832496A6267712A4005BA0C0 /* MapperServices.swift in Sources */,
+				83811672267E2B6100E2F472 /* WhiteButton.swift in Sources */,
 				832496A126771258005BA0C0 /* RemoteDataSourceServices.swift in Sources */,
 				837A0A9B267849B800C51C34 /* DependencyManager.swift in Sources */,
+				8381166C267DD5BF00E2F472 /* SmallVerticalButton.swift in Sources */,
 				83249692267709DC005BA0C0 /* RepositoryServices.swift in Sources */,
 				832496C2267770EA005BA0C0 /* PresenterServices.swift in Sources */,
 				835EF31326722F9E003B63EA /* AppDelegate.swift in Sources */,
@@ -383,7 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				835EF376267237FC003B63EA /* GamesCatalogUITests.swift in Sources */,
+				83811673267E2B6100E2F472 /* WhiteButton.swift in Sources */,
 				836DD76B267B0520001A960E /* HorizontalHomeRow.swift in Sources */,
+				8381166D267DD5BF00E2F472 /* SmallVerticalButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,11 +13,20 @@ struct HomeView: View {
   
   @ObservedObject var presenter: GamePresenter
   
+  let screen = UIScreen.main.bounds
+  
   var body: some View {
     ZStack {
       Color.black.edgesIgnoringSafeArea(.all)
       ScrollView(.vertical, showsIndicators: false) {
         VStack {
+          
+          TopGameView(categories: self.presenter.categories,
+                      promotedGame: GamePresenter.promotedGame)
+            .frame(width: screen.width, height: 550)
+            .padding(.top, -110)
+          
+          
           ForEach(self.presenter.categories) { category in
             VStack {
               HStack {
@@ -28,10 +37,10 @@ struct HomeView: View {
                 HStack {
                   ForEach(self.presenter.getGamesCategory(category: category.name)) { game in
                     HorizontalHomeRow(game: game)
-                      .frame(width: 160, height: 250)
-                      .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                      .frame(width: 120, height: 150)
+                      .padding(.horizontal, 6)
                   }
-                }.padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                }.padding([.leading, .trailing], 6)
               }
             }
           }
