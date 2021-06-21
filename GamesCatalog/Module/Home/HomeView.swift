@@ -18,14 +18,17 @@ struct HomeView: View {
   var body: some View {
     ZStack {
       Color.black.edgesIgnoringSafeArea(.all)
+      
       ScrollView(.vertical, showsIndicators: false) {
         VStack {
+          
+          TopRowButton()
           
           TopGameView(categories: self.presenter.categories,
                       promotedGame: GamePresenter.promotedGame)
             .frame(width: screen.width, height: 550)
             .padding(.top, -110)
-          
+            .zIndex(1)
           
           ForEach(self.presenter.categories) { category in
             VStack {
@@ -57,5 +60,44 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
   static var previews: some View {
     HomeView(presenter: GamePresenter())
+  }
+}
+
+struct TopRowButton: View {
+  var body: some View {
+    HStack {
+      
+      Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Image("ic_game")
+          .resizable()
+          .scaledToFit()
+          .frame(width: 30, height: 50)
+      })
+      .buttonStyle(PlainButtonStyle())
+      
+      Spacer()
+      
+      Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Text("TV Shows")
+      })
+      .buttonStyle(PlainButtonStyle())
+      
+      Spacer()
+      
+      Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Text("Games")
+      })
+      .buttonStyle(PlainButtonStyle())
+      
+      Spacer()
+      
+      Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Text("My List")
+      })
+      .buttonStyle(PlainButtonStyle())
+      
+    }
+    .padding(.leading, 10)
+    .padding(.trailing, 30)
   }
 }
