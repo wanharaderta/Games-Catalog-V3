@@ -16,7 +16,8 @@ extension GameModel {
       released: "2021-06-15",
       bgImage: "https://i.ibb.co/MRg6STN/default-placeholder.png",
       rating: 0.0,
-      genre: "genre string"
+      genre: "genre string",
+      reviewsCount: 0
     )
   }
   

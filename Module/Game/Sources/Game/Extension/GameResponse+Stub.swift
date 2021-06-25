@@ -17,7 +17,8 @@ extension GameResponse {
       released: "2021-06-15",
       bgImage: "https://i.ibb.co/MRg6STN/default-placeholder.png",
       rating: 0.0,
-      genres: []
+      genres: [],
+      reviewsCount: 0
     )
   }
   

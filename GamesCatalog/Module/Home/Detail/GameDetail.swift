@@ -35,7 +35,7 @@ struct GameDetail: View {
               
               HorizontalHomeRow(game: game)
                 
-              GameInfoSubheadline()
+              GameInfoSubheadline(game: game)
             }
           }
           
@@ -54,15 +54,17 @@ struct GameDetail_Previews: PreviewProvider {
 }
 
 struct GameInfoSubheadline: View {
+  var game: GameModel
+  
   var body: some View {
     HStack {
       Image(systemName: "hand.thumbsup.fill")
       
-      Text("Release Date")
+      Text(game.released)
       
       Text("Rating")
       
-      Text("Publisher")
+      Text("\(game.reviewsCount) Reviews")
     }
   }
 }

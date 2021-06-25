@@ -14,4 +14,5 @@ public struct GameModel: Identifiable{
   public let bgImage: String
   public let rating: Double
   public let genre: String
+  public let reviewsCount: Int
 }

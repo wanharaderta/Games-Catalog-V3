@@ -11,6 +11,6 @@ import Combine
 
 public protocol GameUseCase: UseCase {
   func getGames() -> AnyPublisher<[GameModel], Error>
-  func getCategories() -> AnyPublisher<[CategoryModel], Error>
+ // func getCategories() -> AnyPublisher<[CategoryModel], Error>
 //func searchGames(query: String) -> AnyPublisher<[GameModel], Error>
 }

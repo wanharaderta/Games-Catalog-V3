@@ -17,15 +17,18 @@ class GamesRepositoryImplTest: XCTestCase {
   @Injected var _remote: FakeGamesRemoteDataSourceImpl
   private var cancellables: Set<AnyCancellable> = []
   
-  private func testGetGames() {
+  func testRemoteGetGames() {
+    let expectation = self.expectation(description: "get list of game")
     self._remote.getGames()
-      .sink(receiveCompletion: { (_) in }, receiveValue: { (games) in
+      .sink(receiveCompletion: { (_) in }, receiveValue: { games in
         XCTAssertEqual(games[0].name, GameModel.stub.name)
+        expectation.fulfill()
       })
       .store(in: &cancellables)
+    waitForExpectations(timeout: 3, handler: nil)
   }
   
   static var allTests = [
-    ("testGetGames", testGetGames)
+    ("testRemoteGetGames", testRemoteGetGames)
   ]
 }

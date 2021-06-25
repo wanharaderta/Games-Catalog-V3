@@ -27,7 +27,8 @@ public struct GameMapper: Mapper {
         released: result.released,
         bgImage: result.bgImage,
         rating: result.rating,
-        genre: genre)
+        genre: genre,
+        reviewsCount: result.reviewsCount)
     }
   }
 }

@@ -23,6 +23,7 @@ public struct GameResponse: Codable {
   public let bgImage: String
   public let rating: Double
   public let genres: [Genre]?
+  public let reviewsCount: Int
 
   private enum CodingKeys: String, CodingKey {
     case id         = "id"
@@ -31,6 +32,7 @@ public struct GameResponse: Codable {
     case bgImage    = "background_image"
     case rating     = "rating"
     case genres     = "genres"
+    case reviewsCount     = "reviews_count"
   }
 }
 
