@@ -12,12 +12,13 @@ import Combine
 
 public protocol GamesRepository: Repository {
   func getGames() -> AnyPublisher<[GameModel], Error>
+  func getGame() -> AnyPublisher<GameModel, Error>
 //  func getCategories() -> AnyPublisher<[CategoryModel], Error>
 //  func searchGames(query: String) -> AnyPublisher<[GameModel], Error>
 }
 
 public struct GamesRepositoryImpl: GamesRepository {
-  
+
   @Injected var _remote: GamesRemoteDataSourceImpl
   @Injected var _mapper: GameMapper
   @Injected var _mapperCategory: CategoryMapper
@@ -28,6 +29,10 @@ public struct GamesRepositoryImpl: GamesRepository {
     return self._remote.getGames()
       .map { _mapper.transformResponseToDomain(response: $0) }
       .eraseToAnyPublisher()
+  }
+  
+  public func getGame() -> AnyPublisher<GameModel, Error> {
+    <#code#>
   }
   
 //  public func getCategories() -> AnyPublisher<[CategoryModel], Error> {
